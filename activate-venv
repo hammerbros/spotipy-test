@@ -1,0 +1,7 @@
+# Create and activate venv and install all requirements with pip.
+#
+# THIS SCRIPT MUST BE SOURCED
+
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
