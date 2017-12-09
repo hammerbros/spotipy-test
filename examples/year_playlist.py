@@ -48,9 +48,7 @@ def _parse_args():
 def _get_user_playlists(spotify_client, username):
     """Get the list of playlists of a user as raw dictionaries. """
     playlists = spotify_client.user_playlists(user=username)
-    if not playlists:
-        return None
-    return playlists['items']
+    return playlists and playlists['items']
 
 def _get_playlist_by_name(playlists, name):
     """Get a playlist by its name from a list of raw playlist dictionaries."""
